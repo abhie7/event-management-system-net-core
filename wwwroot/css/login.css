@@ -1,0 +1,75 @@
+:root {
+    --background: #18181B;
+    --text: #edf1ff;
+}
+
+body {
+    font-family: 'Nohemi', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+#account{
+    padding: 2em;
+    width: 25em;
+    /*border: 1px solid rgba(77, 77, 89, 0.58);;*/
+}
+
+hr {
+    width: 106%;
+    border: 1px solid rgba(77, 77, 89, 0.58);
+}
+
+.login-row {
+    display: flex;
+    justify-content: center;
+}
+
+.input-group {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.input-control {
+    width: 100%;
+    padding: 1em;
+    border-radius: 0.7em;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.checkbox-group {
+    margin-bottom: 1.5em;
+}
+
+.checkbox-input {
+    margin-right: 0.5rem;
+}
+
+.submit-button {
+    width: 107%;
+    padding: 1em; 
+    border: none;
+    border-radius: 0.7em;
+    background-color: #4133cf;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #4c41ea;
+}
+
+.options p{
+    text-decoration: none;
+    color: var(--text);
+}
+
+.text-danger {
+    color: #ff0000;
+}

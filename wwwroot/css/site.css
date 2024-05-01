@@ -1,0 +1,87 @@
+:root {
+  --background: #fff;
+  --text: #333;
+}
+
+body {
+    height: 100vh;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.btn {
+    font-size: 1rem;
+}
+
+main {
+    padding-bottom: 1.5em;
+}
+
+.theme-button {
+    color: var(--text) !important;
+}
+
+.custom-navbar {
+  border-bottom: 1px solid rgba(77, 77, 89, 0.58);
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.navbar-brand {
+    color: var(--text);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+}
+
+.navbar-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+.navbar-item .navbar-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.main-container {
+  padding: 1em;
+}
+
+.navbar {
+    font-size: 1.2rem;
+}
+
+.navbar:hover {
+    color: #3003d3 !important;
+}
+
+.back-to-list {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.back-to-list:hover {
+    color: #3003d3 !important;
+}
+
+.custom-footer {
+  /*border-top:  1px solid rgba(77, 77, 89, 0.58);*/
+  color: var(--text);
+  font-size: 1.2rem;
+  padding: 2em 2em 2em 2em;
+  bottom: 0;
+  width: 100%;
+}
