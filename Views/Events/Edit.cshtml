@@ -1,0 +1,63 @@
+@model EventManagementSystem.Models.eventstable
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="event_id" />
+            <div class="mb-3">
+                <label asp-for="event_name" class="form-label">Event Name</label>
+                <input asp-for="event_name" class="form-control" />
+                <span asp-validation-for="event_name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="category" class="form-label">Category</label>
+                <input asp-for="category" class="form-control" />
+                <span asp-validation-for="category" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="start_date" class="form-label">Start Date</label>
+                <input asp-for="start_date" class="form-control" />
+                <span asp-validation-for="start_date" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="end_date" class="form-label">End Date</label>
+                <input asp-for="end_date" class="form-control" />
+                <span asp-validation-for="end_date" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="venue" class="form-label">Venue</label>
+                <input asp-for="venue" class="form-control" />
+                <span asp-validation-for="venue" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="status" class="form-label">Status</label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_user_name" class="form-label">Booking User Name</label>
+                <input asp-for="booking_user_name" class="form-control" />
+                <span asp-validation-for="booking_user_name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="text-decoration-none btn btn-primary">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

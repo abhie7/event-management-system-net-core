@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="container py-5">
+        <h1 class="display-4">Welcome to</h1>
+        <h2 class="display-1 fw-bold text-primary">Event Management System</h2>
+        <p class="lead">Effortlessly Log and Manage Your Company's Events!</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="@Url.Action("Index", "Events")" class="btn btn-primary btn-lg px-4 me-sm-3">View Events</a>
+            <a href="@Url.Action("Create", "Events")" class="btn btn-outline-secondary btn-lg px-4">Log an Event</a>
+        </div>
+    </div>
+</div>
