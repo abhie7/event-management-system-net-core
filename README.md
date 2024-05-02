@@ -1,31 +1,84 @@
 # Event Management System in .Net Core MVC
-This is an Event Management System built in Asp .Net Core 8.0 and PostgreSQL
----
-## Steps.
 
-1. Install the required NuGet packages which include EF Core, EF Core Identity, Microsoft.EntityFrameworkCore.Tools and Identity Model.
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Models](#models)
+- [Controllers](#controllers)
+- [Views](#views)
+- [Installation](#installation)
+- [Security](#security)
+- [Conclusion](#conclusion)
+
+---
+
+## Introduction
+This document provides a comprehensive overview of the Event Management System built in Asp .Net Core MVC. The system allows users to manage events and categories, with authentication implemented to ensure data security.
+
+## Models
+### AppUser
+- Inherits from `IdentityUser`.
+- Additional properties: Name, Address.
+
+### Event
+- Represents an event.
+- Properties include: EventID, EventName, Category, StartDate, EndDate, Venue, Status, BookingUserName.
+
+### Category
+- Represents a category for events.
+- Properties include: CategoryID, CategoryName, Description, PricePerHour, PricePerDay, IsActive, MaxCapacity.
+
+## Controllers
+- **AccountController**: Manages user authentication, including login, register, and logout functionalities.
+- **EventsController**: Handles CRUD operations for events.
+- **CategoriesController**: Handles CRUD operations for categories.
+
+## Views
+### **Login**: Allows users to log in to the system.
+![Login View](https://imgur.com/vDfZeQC.png)
+### **Register**: Allows users to create a new account.
+![Register View](https://imgur.com/1blvc61.png)
+### **Landing**: Home page of the application.
+![Landing View](https://imgur.com/lhBifNp.png)
+### **Events**: Displays a list of events and provides options for CRUD operations.
+![Events View](https://imgur.com/UAQwKBB.png)
+### **Categories**: Displays a list of categories and provides options for CRUD operations.
+![Categories View](https://imgur.com/6OXcIdv.png)
+### **Create**: Allows users to create an event and category.
+![Create View](https://imgur.com/IgHNXWV.png)
+### **Edit**: Allows users to edit event and category details.
+![Edit View](https://imgur.com/mrWne2h.png)
+### **Details**: Shows detailed information about a specific event or category.
+![Details View](https://imgur.com/3crJcrn.png)
+### **Delete**: Allows users to delete events and categories.
+![Delete View](https://imgur.com/bIuKP8y.png)
+
+---
+## Installation
+
+### Clone Repository
+To clone the repository, run the following command:
+
+```bash
+git clone https://github.com/abhie7/event-management-system-dotnet-core.git
+```
+
+### Install Dependencies
+1. Install the required NuGet packages:
    - `Microsoft.AspNetCore.EntityFramework ≥ 8.0.4`
    - `Microsoft.AspNetCore.Identity ≥ 8.0.4`
    - `Microsoft.EntityFrameworkCore.Tools ≥ 8.0.4`
    - `Microsoft.EntityFrameworkCore.Design ≥ 8.0.4`
    - `Microsoft.VisualStudio.Web.CodeGenerators.Design ≥ 8.0.2`
    - `Npgsql.EntityFrameworkCore.PostgreSQL ≥ 8.0.2`
-3. Create a new ASP.Net Core MVC project.
-4. Add a new folder named Data and a class named `DBContext` that inherits from `IdentityDbContext`. This class will manage database operations.
-5. Create a new model named `AppUser` that inherits from `IdentityUser`. `AppUser` will have two additional properties, Name and Address.
-6. Configure the connection string in `appsettings.cs`.
-7. Register the `DbContext` in the `Program.cs` file.
-8. Add Migrations and update the database using the Package Manager Console.
-9. Create two new view models, `LoginVM` and `RegisterVM`. `LoginVM` will have Username, Password and RememberMe properties. `RegisterVM` will have Name, Email, Password, ConfirmPassword and Address properties.
-10. Create a new controller named `AccountController`. This controller will have Login, Register and Logout functionalities.
-11. Design Login and Register views using Razor Pages.
-12. Implement the functionalities for Login and Register in the `AccountController`. `SignInManager` and `UserManager` classes are used to perform the login and register operations.
-13. Add client-side validation for the Login and Register views.
-14. Create a new partial view named LoginPartial to display the login and logout functionality based on the user being signed in or not.
-15. Implement the logout functionality in the `AccountController`.
-16. Created a table named `eventstable` in my PostgreSQL database.
-17. Used the connection string to connect my ASP.Net Core application and scaffolded the eventstable table. This generated an `eventstable.cs` model class and an `EventsDbContext.cs` class.
-18. Scaffolded an MVC Controller named `EventsController` which includes views for managing events.
-19. Built the user interface (UI) using Razor Pages and Bootstrap for styling.
-20. Added a search function for users to find events.
+2. Create a new ASP.Net Core MVC project.
+3. Follow the steps outlined in the project's README.md file for setting up the database connection and initial configurations.
+
+## Security
+- Users must log in before accessing the tables to manage events and categories.
+- Authentication is handled using ASP.NET Core Identity.
+
+## Conclusion
+The Event Management System provides a user-friendly interface for managing events and categories securely. With features such as authentication and CRUD operations, it offers a robust solution for event organization and management.
+
 ---
