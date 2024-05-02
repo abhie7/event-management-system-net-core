@@ -4,12 +4,12 @@ This is an Event Management System built in Asp .Net Core 8.0
 ## Steps.
 
 1. Install the required NuGet packages which include EF Core, EF Core Identity, Microsoft.EntityFrameworkCore.Tools and Identity Model.
-   - Microsoft.AspNetCore.EntityFramework ≥ 8.0.4
-   - Microsoft.AspNetCore.Identity ≥ 8.0.4
-   - Microsoft.EntityFrameworkCore.Tools ≥ 8.0.4
-   - Microsoft.EntityFrameworkCore.Design ≥ 8.0.4
-   - Microsoft.VisualStudio.Web.CodeGenerators.Design ≥ 8.0.2
-   - Npgsql.EntityFrameworkCore.PostgreSQL ≥ 8.0.2
+   - `Microsoft.AspNetCore.EntityFramework ≥ 8.0.4`
+   - `Microsoft.AspNetCore.Identity ≥ 8.0.4`
+   - `Microsoft.EntityFrameworkCore.Tools ≥ 8.0.4`
+   - `Microsoft.EntityFrameworkCore.Design ≥ 8.0.4`
+   - `Microsoft.VisualStudio.Web.CodeGenerators.Design ≥ 8.0.2`
+   - `Npgsql.EntityFrameworkCore.PostgreSQL ≥ 8.0.2`
 3. Create a new ASP.Net Core MVC project.
 4. Add a new folder named Data and a class named `DBContext` that inherits from `IdentityDbContext`. This class will manage database operations.
 5. Create a new model named `AppUser` that inherits from `IdentityUser`. `AppUser` will have two additional properties, Name and Address.
