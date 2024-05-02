@@ -1,5 +1,7 @@
 # Event Management System in .Net Core MVC
 
+This is an Event Management System built in Asp .Net Core 8.0 and PostgreSQL.
+
 # Table of Contents
 
 - [Introduction](#introduction)
@@ -32,6 +34,16 @@ This document provides a comprehensive overview of the Event Management System b
 - **AccountController**: Manages user authentication, including login, register, and logout functionalities.
 - **EventsController**: Handles CRUD operations for events.
 - **CategoriesController**: Handles CRUD operations for categories.
+
+## Database
+
+### PostgreSQL 
+
+Event Management System utilizes PostgreSQL as its relational database management system. PostgreSQL offers robust features, reliability, and scalability, making it an ideal choice for storing and managing event-related data.
+
+PostgreSQL enables efficient data handling, ACID compliance, and support for complex queries, ensuring the system's stability and performance. Additionally, PostgreSQL's support for JSON data types allows for flexible schema design, accommodating various event attributes and configurations.
+
+By leveraging PostgreSQL, the Event Management System ensures data integrity, scalability, and optimal performance, providing users with a seamless experience while managing events and categories.
 
 ## Views
 ### **Login**: Allows users to log in to the system.
