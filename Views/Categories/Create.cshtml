@@ -1,0 +1,48 @@
+@model EventManagementSystem.Models.event_category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3>Create new category</h3>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div class="mb-3">
+                <label asp-for="category" class="form-label">Category</label>
+                <input asp-for="category" class="form-control" />
+                <span asp-validation-for="category" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="description" class="form-label">Description</label>
+                <input asp-for="description" class="form-control" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="price_per_hour" class="form-label">Price Per Hour</label>
+                <input asp-for="price_per_hour" class="form-control" />
+                <span asp-validation-for="price_per_hour" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="price_per_day" class="form-label">Price Per Day</label>
+                <input asp-for="price_per_day" class="form-control" />
+                <span asp-validation-for="price_per_day" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="max_capacity" class="form-label">Max Capacity</label>
+                <input asp-for="max_capacity" class="form-control" />
+                <span asp-validation-for="max_capacity" class="text-danger"></span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

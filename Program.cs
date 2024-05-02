@@ -16,6 +16,9 @@ builder.Services.AddDbContext<IdentityDBContext>(
 builder.Services.AddDbContext<EventsDbContext>(
     options => options.UseNpgsql(connectionString)
 );
+builder.Services.AddDbContext<CategoriesDbContext>(
+    options => options.UseNpgsql(connectionString)
+);
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(
         options =>

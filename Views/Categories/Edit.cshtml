@@ -1,0 +1,62 @@
+@model EventManagementSystem.Models.event_category
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h3>Edit @Model.category</h3>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="category_id" />
+            <div class="mb-3">
+                <label asp-for="category" class="form-label">Category</label>
+                <input asp-for="category" class="form-control" />
+                <span asp-validation-for="category" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="description" class="form-label">Description</label>
+                <input asp-for="description" class="form-control" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="price_per_hour" class="form-label">Price Per Hour</label>
+                <input asp-for="price_per_hour" class="form-control" />
+                <span asp-validation-for="price_per_hour" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="price_per_day" class="form-label">Price Per Day</label>
+                <input asp-for="price_per_day" class="form-control" />
+                <span asp-validation-for="price_per_day" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="is_active" class="form-label">Is Active</label>
+                <div class="form-check">
+                    <input asp-for="is_active" value="true" type="radio" class="form-check-input" id="isActiveTrue" checked="@Model.is_active" />
+                    <label class="form-check-label" for="isActiveTrue">True</label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="is_active" value="false" type="radio" class="form-check-input" id="isActiveFalse" checked="@(!Model.is_active)" />
+                    <label class="form-check-label" for="isActiveFalse">False</label>
+                </div>
+                <span asp-validation-for="is_active" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="max_capacity" class="form-label">Max Capacity</label>
+                <input asp-for="max_capacity" class="form-control" />
+                <span asp-validation-for="max_capacity" class="text-danger"></span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

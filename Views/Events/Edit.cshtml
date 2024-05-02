@@ -4,7 +4,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h2>Edit @Model.event_name</h2>
 
 <hr />
 <div class="row justify-content-center">
@@ -47,15 +47,12 @@
                 <input asp-for="booking_user_name" class="form-control" />
                 <span asp-validation-for="booking_user_name" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="mb-3 d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index" class="text-decoration-none btn btn-primary">Back to List</a>
 </div>
 
 @section Scripts {

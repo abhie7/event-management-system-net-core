@@ -1,0 +1,56 @@
+@model EventManagementSystem.Models.event_category
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-center text-primary mb-4">Details</h1>
+
+<div class="row d-flex align-items-center justify-content-center">
+    <div class="col-md-6 card p-4 shadow-lg rounded-lg">
+        <h4 class="text-center text-secondary mb-3">Event Category Details</h4>
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-5">
+                Category
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.category)
+            </dd>
+            <dt class = "col-sm-5">
+                Description
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.description)
+            </dd>
+            <dt class = "col-sm-5">
+                Price Per Hour
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.price_per_hour)
+            </dd>
+            <dt class = "col-sm-5">
+                Price Per Day
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.price_per_day)
+            </dd>
+            <dt class = "col-sm-5">
+                Is Active
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.is_active)
+            </dd>
+            <dt class = "col-sm-5">
+                Max Capacity
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.max_capacity)
+            </dd>
+        </dl>
+        <div class="d-flex justify-content-between mt-3">
+            <a asp-action="Edit" asp-route-id="@Model?.category_id" class="btn btn-warning">Edit</a>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>

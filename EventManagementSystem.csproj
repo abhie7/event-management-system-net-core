@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
+      <PackageReference Include="PagedList.EntityFramework" Version="1.0.1" />
+      <PackageReference Include="PagedList.Mvc" Version="4.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Events\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Events\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Events\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Events\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Events\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Context\" />
+    </ItemGroup>
+
+</Project>

@@ -1,6 +1,6 @@
 :root {
   --background: #fff;
-  --text: #333;
+  --text: #fff;
 }
 
 body {
@@ -34,8 +34,12 @@ main {
 
 .navbar-brand {
     color: var(--text);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: #d5d5d5 !important;
 }
 
 .navbar-menu {
@@ -56,6 +60,10 @@ main {
   text-decoration: none;
 }
 
+.navbar-link:hover {
+    color: #d5d5d5 !important;
+}
+
 .main-container {
   padding: 1em;
 }
@@ -65,7 +73,7 @@ main {
 }
 
 .navbar:hover {
-    color: #3003d3 !important;
+    color: #d5d5d5 !important;;
 }
 
 .back-to-list {

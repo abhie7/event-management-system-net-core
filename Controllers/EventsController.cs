@@ -20,10 +20,26 @@ namespace EventManagementSystem.Controllers
         }
 
         // GET: Events
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString = null)
         {
-            return View(await _context.eventstables.ToListAsync());
+            var events = from e in _context.eventstables
+                select e;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                events = events.Where(s =>
+                    s.event_name.ToLower().Contains(searchString) ||
+                    s.category.Contains(searchString) ||
+                    s.start_date.ToString().Contains(searchString) || // Assuming start_date is of type DateTime
+                    s.end_date.ToString().Contains(searchString) ||   // Assuming end_date is of type DateTime
+                    s.venue.Contains(searchString) ||
+                    s.status.Contains(searchString) ||
+                    s.booking_user_name.Contains(searchString)
+                );
+            }
+            return View(await events.ToListAsync());
         }
+
 
         // GET: Events/Details/5
         public async Task<IActionResult> Details(int? id)
