@@ -1,6 +1,6 @@
-# event-management-system-.net
-This is an Event Management System built in Asp .Net Core 8.0
-
+# Event Management System in .Net Core MVC
+This is an Event Management System built in Asp .Net Core 8.0 and PostgreSQL
+---
 ## Steps.
 
 1. Install the required NuGet packages which include EF Core, EF Core Identity, Microsoft.EntityFrameworkCore.Tools and Identity Model.
@@ -28,3 +28,4 @@ This is an Event Management System built in Asp .Net Core 8.0
 18. Scaffolded an MVC Controller named `EventsController` which includes views for managing events.
 19. Built the user interface (UI) using Razor Pages and Bootstrap for styling.
 20. Added a search function for users to find events.
+---
